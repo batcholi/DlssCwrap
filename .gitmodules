@@ -1,0 +1,6 @@
+[submodule "dlss"]
+	path = dlss
+	url = git@github.com:NVIDIA/DLSS.git
+[submodule "vulkan"]
+	path = vulkan
+	url = https://github.com/KhronosGroup/Vulkan-Headers.git
