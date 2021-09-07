@@ -1,12 +1,18 @@
 #pragma once
 
 #ifndef DLSSCWRAP_FUNC
-	#define DLSSCWRAP_FUNC __declspec(dllimport)
+	#ifdef _WIN32
+		#define DLSSCWRAP_FUNC extern "C" __declspec(dllimport)
+	#else
+		#define DLSSCWRAP_FUNC
+	#endif
 #endif
 
-#ifndef VULKAN_H_
-	#define VK_NO_PROTOTYPES
-	#include <vulkan.h>
+#ifdef _MSC_VER
+	#ifndef VULKAN_H_
+		#define VK_NO_PROTOTYPES
+		#include <vulkan.h>
+	#endif
 #endif
 
 #include <nvsdk_ngx.h>

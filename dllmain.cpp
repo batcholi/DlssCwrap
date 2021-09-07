@@ -1,26 +1,14 @@
 /*
-#define WIN32_LEAN_AND_MEAN
-#include <windows.h>
+ * DlssCwrap for Windows
+ * This is a very simple C wrapper around a few functions from the official nvngx_dlss.lib
+ * The reason we need this is because MinGW does not like the official library that was compiled using MSVC with C++ exports
+ * Hence, here we re-export these functions as C and compile it using MSVC, then we can simply statically link to it.
+ * The Linux version does not need this and we can link normally with libnvsdk_ngx.a and implement this file directly
+ */
 
-BOOL APIENTRY DllMain( HMODULE hModule,
-                       DWORD  ul_reason_for_call,
-                       LPVOID lpReserved
-                     )
-{
-    switch (ul_reason_for_call)
-    {
-    case DLL_PROCESS_ATTACH:
-    case DLL_THREAD_ATTACH:
-    case DLL_THREAD_DETACH:
-    case DLL_PROCESS_DETACH:
-        break;
-    }
-    return TRUE;
-}
-
-*/
-
-#define DLSSCWRAP_FUNC extern "C" __declspec(dllexport)
+#ifdef _MSC_VER
+	#define DLSSCWRAP_FUNC extern "C" __declspec(dllexport)
+#endif
 #include "DlssCwrap.h"
 
 NVSDK_NGX_Result DlssCwrap__NVSDK_NGX_VULKAN_Init(
