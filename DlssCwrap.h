@@ -24,7 +24,9 @@ DLSSCWRAP_FUNC NVSDK_NGX_Result DlssCwrap__NVSDK_NGX_VULKAN_Init(
 	const wchar_t* InApplicationDataPath,
 	VkInstance InInstance,
 	VkPhysicalDevice InPD,
-	VkDevice InDevice);
+	VkDevice InDevice,
+	PFN_vkGetInstanceProcAddr InGIPA = nullptr,
+	PFN_vkGetDeviceProcAddr InGDPA = nullptr);
 
 DLSSCWRAP_FUNC NVSDK_NGX_Result DlssCwrap__NVSDK_NGX_VULKAN_Init_with_ProjectID(
 	const char* InProjectId,
@@ -33,7 +35,9 @@ DLSSCWRAP_FUNC NVSDK_NGX_Result DlssCwrap__NVSDK_NGX_VULKAN_Init_with_ProjectID(
 	const wchar_t* InApplicationDataPath,
 	VkInstance InInstance,
 	VkPhysicalDevice InPD,
-	VkDevice InDevice);
+	VkDevice InDevice,
+	PFN_vkGetInstanceProcAddr InGIPA = nullptr,
+	PFN_vkGetDeviceProcAddr InGDPA = nullptr);
 
 DLSSCWRAP_FUNC NVSDK_NGX_Result DlssCwrap__NVSDK_NGX_VULKAN_GetCapabilityParameters(
 	NVSDK_NGX_Parameter** OutParameters);

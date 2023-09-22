@@ -16,13 +16,17 @@ NVSDK_NGX_Result DlssCwrap__NVSDK_NGX_VULKAN_Init(
 	const wchar_t* InApplicationDataPath,
 	VkInstance InInstance,
 	VkPhysicalDevice InPD,
-	VkDevice InDevice) {
+	VkDevice InDevice,
+	PFN_vkGetInstanceProcAddr InGIPA,
+	PFN_vkGetDeviceProcAddr InGDPA) {
 	return NVSDK_NGX_VULKAN_Init(
 		InApplicationId,
 		InApplicationDataPath,
 		InInstance,
 		InPD,
 		InDevice,
+		InGIPA,
+		InGDPA,
 		nullptr,
 		NVSDK_NGX_Version_API);
 }
@@ -34,7 +38,9 @@ NVSDK_NGX_Result DlssCwrap__NVSDK_NGX_VULKAN_Init_with_ProjectID(
 	const wchar_t* InApplicationDataPath,
 	VkInstance InInstance,
 	VkPhysicalDevice InPD,
-	VkDevice InDevice) {
+	VkDevice InDevice,
+	PFN_vkGetInstanceProcAddr InGIPA,
+	PFN_vkGetDeviceProcAddr InGDPA) {
 	return NVSDK_NGX_VULKAN_Init_with_ProjectID(
 		InProjectId,
 		InEngineType,
@@ -43,6 +49,8 @@ NVSDK_NGX_Result DlssCwrap__NVSDK_NGX_VULKAN_Init_with_ProjectID(
 		InInstance,
 		InPD,
 		InDevice,
+		InGIPA,
+		InGDPA,
 		nullptr,
 		NVSDK_NGX_Version_API);
 }
@@ -137,6 +145,6 @@ NVSDK_NGX_Result DlssCwrap__NVSDK_NGX_VULKAN_DestroyParameters(
 }
 
 NVSDK_NGX_Result DlssCwrap__NVSDK_NGX_VULKAN_Shutdown() {
-	return NVSDK_NGX_VULKAN_Shutdown();
+	return NVSDK_NGX_VULKAN_Shutdown1(nullptr);
 }
 
