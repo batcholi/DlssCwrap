@@ -101,6 +101,10 @@ NVSDK_NGX_Result DlssCwrap__NVSDK_NGX_VULKAN_CreateFeature1(VkDevice InDevice, V
 	return NVSDK_NGX_VULKAN_CreateFeature1(InDevice, InCmdList, InFeatureID, InParameters, OutHandle);
 }
 
+NVSDK_NGX_Result DlssCwrap__NVSDK_NGX_VULKAN_EvaluateFeature_C(VkCommandBuffer InCmdList, const NVSDK_NGX_Handle *InFeatureHandle, const NVSDK_NGX_Parameter *InParameters, PFN_NVSDK_NGX_ProgressCallback_C InCallback) {
+	return NVSDK_NGX_VULKAN_EvaluateFeature_C(InCmdList, InFeatureHandle, InParameters, InCallback);
+}
+
 NVSDK_NGX_Result DlssCwrap__NGX_DLSS_GET_OPTIMAL_SETTINGS(
 	NVSDK_NGX_Parameter* pInParams,
 	unsigned int InUserSelectedWidth,
