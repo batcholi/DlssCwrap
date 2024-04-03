@@ -50,6 +50,18 @@ DLSSCWRAP_FUNC NVSDK_NGX_Result DlssCwrap__NGX_VULKAN_CREATE_DLSS_EXT(
 	NVSDK_NGX_Parameter* pInParams,
 	NVSDK_NGX_DLSS_Create_Params* pInDlssCreateParams);
 
+DLSSCWRAP_FUNC NVSDK_NGX_Result DlssCwrap__NGX_VULKAN_CREATE_DLSS_EXT1(
+	VkDevice InDevice,
+	VkCommandBuffer InCmdList,
+	unsigned int InCreationNodeMask,
+	unsigned int InVisibilityNodeMask,
+	NVSDK_NGX_Handle** ppOutHandle,
+	NVSDK_NGX_Parameter* pInParams,
+	NVSDK_NGX_DLSS_Create_Params* pInDlssCreateParams);
+
+DLSSCWRAP_FUNC NVSDK_NGX_Result DlssCwrap__NVSDK_NGX_VULKAN_CreateFeature(VkCommandBuffer InCmdBuffer, NVSDK_NGX_Feature InFeatureID, NVSDK_NGX_Parameter* InParameters, NVSDK_NGX_Handle** OutHandle);
+DLSSCWRAP_FUNC NVSDK_NGX_Result DlssCwrap__NVSDK_NGX_VULKAN_CreateFeature1(VkDevice InDevice, VkCommandBuffer InCmdList, NVSDK_NGX_Feature InFeatureID, NVSDK_NGX_Parameter* InParameters, NVSDK_NGX_Handle** OutHandle);
+
 DLSSCWRAP_FUNC NVSDK_NGX_Result DlssCwrap__NGX_DLSS_GET_OPTIMAL_SETTINGS(
 	NVSDK_NGX_Parameter* pInParams,
 	unsigned int InUserSelectedWidth,
