@@ -17,7 +17,9 @@
 
 #include <nvsdk_ngx.h>
 #include <nvsdk_ngx_helpers.h>
+#include <nvsdk_ngx_helpers_dlssd.h>
 #include <nvsdk_ngx_helpers_vk.h>
+#include <nvsdk_ngx_helpers_dlssd_vk.h>
 
 DLSSCWRAP_FUNC NVSDK_NGX_Result DlssCwrap__NVSDK_NGX_VULKAN_Init(
 	unsigned long long InApplicationId,
@@ -59,6 +61,15 @@ DLSSCWRAP_FUNC NVSDK_NGX_Result DlssCwrap__NGX_VULKAN_CREATE_DLSS_EXT1(
 	NVSDK_NGX_Parameter* pInParams,
 	NVSDK_NGX_DLSS_Create_Params* pInDlssCreateParams);
 
+DLSSCWRAP_FUNC NVSDK_NGX_Result DlssCwrap__NGX_VULKAN_CREATE_DLSSD_EXT1(
+	VkDevice InDevice,
+	VkCommandBuffer InCmdList,
+	unsigned int InCreationNodeMask,
+	unsigned int InVisibilityNodeMask,
+	NVSDK_NGX_Handle** ppOutHandle,
+	NVSDK_NGX_Parameter* pInParams,
+	NVSDK_NGX_DLSSD_Create_Params* pInDlssDCreateParams);
+
 DLSSCWRAP_FUNC NVSDK_NGX_Result DlssCwrap__NVSDK_NGX_VULKAN_CreateFeature(VkCommandBuffer InCmdBuffer, NVSDK_NGX_Feature InFeatureID, NVSDK_NGX_Parameter* InParameters, NVSDK_NGX_Handle** OutHandle);
 DLSSCWRAP_FUNC NVSDK_NGX_Result DlssCwrap__NVSDK_NGX_VULKAN_CreateFeature1(VkDevice InDevice, VkCommandBuffer InCmdList, NVSDK_NGX_Feature InFeatureID, NVSDK_NGX_Parameter* InParameters, NVSDK_NGX_Handle** OutHandle);
 DLSSCWRAP_FUNC NVSDK_NGX_Result DlssCwrap__NVSDK_NGX_VULKAN_EvaluateFeature_C(VkCommandBuffer InCmdList, const NVSDK_NGX_Handle *InFeatureHandle, const NVSDK_NGX_Parameter *InParameters, PFN_NVSDK_NGX_ProgressCallback_C InCallback);
@@ -90,6 +101,12 @@ DLSSCWRAP_FUNC NVSDK_NGX_Result DlssCwrap__NGX_VULKAN_EVALUATE_DLSS_EXT(
 	NVSDK_NGX_Handle* pInHandle,
 	NVSDK_NGX_Parameter* pInParams,
 	NVSDK_NGX_VK_DLSS_Eval_Params* pInDlssEvalParams);
+
+DLSSCWRAP_FUNC NVSDK_NGX_Result DlssCwrap__NGX_VULKAN_EVALUATE_DLSSD_EXT(
+	VkCommandBuffer InCmdList,
+	NVSDK_NGX_Handle* pInHandle,
+	NVSDK_NGX_Parameter* pInParams,
+	NVSDK_NGX_VK_DLSSD_Eval_Params* pInDlssDEvalParams);
 
 DLSSCWRAP_FUNC NVSDK_NGX_Result DlssCwrap__NVSDK_NGX_VULKAN_ReleaseFeature(
 	NVSDK_NGX_Handle* InHandle);
