@@ -1,0 +1,9 @@
+﻿  dllmain.cpp
+LINK : warning LNK4075: ignoring '/INCREMENTAL' due to '/OPT:ICF' specification
+dllmain.obj : warning LNK4075: ignoring '/EDITANDCONTINUE' due to '/OPT:ICF' specification
+     Creating library C:\Users\olivier\Documents\dlssCwrap\DlssCwrap\x64\Debug\DlssCwrap.lib and object C:\Users\olivier\Documents\dlssCwrap\DlssCwrap\x64\Debug\DlssCwrap.exp
+LINK : warning LNK4098: defaultlib 'LIBCMTD' conflicts with use of other libs; use /NODEFAULTLIB:library
+nvsdk_ngx_s_dbg.lib(nvsdk_ngx_lib_windows.obj) : error LNK2019: unresolved external symbol _CrtDbgReportW referenced in function "public: wchar_t const * & __cdecl std::vector<wchar_t const *,class std::allocator<wchar_t const *> >::operator[](unsigned __int64)" (??A?$vector@PEB_WV?$allocator@PEB_W@std@@@std@@QEAAAEAPEB_W_K@Z)
+libcpmtd.lib(stdthrow.obj) : error LNK2001: unresolved external symbol _CrtDbgReportW
+nvsdk_ngx_s_dbg.lib(common_lib.obj) : error LNK2019: unresolved external symbol _CrtSetReportMode referenced in function "bool __cdecl NGXSafeInitializeLog(wchar_t const *,wchar_t const *,int,void (__cdecl*)(char const *,enum NVSDK_NGX_Logging_Level,enum NVSDK_NGX_Feature),bool)" (?NGXSafeInitializeLog@@YA_NPEB_W0HP6AXPEBDW4NVSDK_NGX_Logging_Level@@W4NVSDK_NGX_Feature@@@Z_N@Z)
+C:\Users\olivier\Documents\dlssCwrap\DlssCwrap\x64\Debug\DlssCwrap.dll : fatal error LNK1120: 2 unresolved externals
