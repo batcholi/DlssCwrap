@@ -116,3 +116,19 @@ DLSSCWRAP_FUNC NVSDK_NGX_Result DlssCwrap__NVSDK_NGX_VULKAN_DestroyParameters(
 
 DLSSCWRAP_FUNC NVSDK_NGX_Result DlssCwrap__NVSDK_NGX_VULKAN_Shutdown();
 
+// Parameter Set functions
+DLSSCWRAP_FUNC void DlssCwrap__NVSDK_NGX_Parameter_SetULL(NVSDK_NGX_Parameter* InParameter, const char* InName, unsigned long long InValue);
+DLSSCWRAP_FUNC void DlssCwrap__NVSDK_NGX_Parameter_SetF(NVSDK_NGX_Parameter* InParameter, const char* InName, float InValue);
+DLSSCWRAP_FUNC void DlssCwrap__NVSDK_NGX_Parameter_SetD(NVSDK_NGX_Parameter* InParameter, const char* InName, double InValue);
+DLSSCWRAP_FUNC void DlssCwrap__NVSDK_NGX_Parameter_SetUI(NVSDK_NGX_Parameter* InParameter, const char* InName, unsigned int InValue);
+DLSSCWRAP_FUNC void DlssCwrap__NVSDK_NGX_Parameter_SetI(NVSDK_NGX_Parameter* InParameter, const char* InName, int InValue);
+DLSSCWRAP_FUNC void DlssCwrap__NVSDK_NGX_Parameter_SetVoidPointer(NVSDK_NGX_Parameter* InParameter, const char* InName, void* InValue);
+
+// Parameter Get functions
+DLSSCWRAP_FUNC NVSDK_NGX_Result DlssCwrap__NVSDK_NGX_Parameter_GetULL(NVSDK_NGX_Parameter* InParameter, const char* InName, unsigned long long* OutValue);
+DLSSCWRAP_FUNC NVSDK_NGX_Result DlssCwrap__NVSDK_NGX_Parameter_GetF(NVSDK_NGX_Parameter* InParameter, const char* InName, float* OutValue);
+DLSSCWRAP_FUNC NVSDK_NGX_Result DlssCwrap__NVSDK_NGX_Parameter_GetD(NVSDK_NGX_Parameter* InParameter, const char* InName, double* OutValue);
+DLSSCWRAP_FUNC NVSDK_NGX_Result DlssCwrap__NVSDK_NGX_Parameter_GetUI(NVSDK_NGX_Parameter* InParameter, const char* InName, unsigned int* OutValue);
+DLSSCWRAP_FUNC NVSDK_NGX_Result DlssCwrap__NVSDK_NGX_Parameter_GetI(NVSDK_NGX_Parameter* InParameter, const char* InName, int* OutValue);
+DLSSCWRAP_FUNC NVSDK_NGX_Result DlssCwrap__NVSDK_NGX_Parameter_GetVoidPointer(NVSDK_NGX_Parameter* InParameter, const char* InName, void** OutValue);
+

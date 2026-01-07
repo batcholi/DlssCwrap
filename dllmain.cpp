@@ -207,3 +207,53 @@ NVSDK_NGX_Result DlssCwrap__NVSDK_NGX_VULKAN_Shutdown() {
 	return NVSDK_NGX_VULKAN_Shutdown1(nullptr);
 }
 
+// Parameter Set functions
+void DlssCwrap__NVSDK_NGX_Parameter_SetULL(NVSDK_NGX_Parameter* InParameter, const char* InName, unsigned long long InValue) {
+	NVSDK_NGX_Parameter_SetULL(InParameter, InName, InValue);
+}
+
+void DlssCwrap__NVSDK_NGX_Parameter_SetF(NVSDK_NGX_Parameter* InParameter, const char* InName, float InValue) {
+	NVSDK_NGX_Parameter_SetF(InParameter, InName, InValue);
+}
+
+void DlssCwrap__NVSDK_NGX_Parameter_SetD(NVSDK_NGX_Parameter* InParameter, const char* InName, double InValue) {
+	NVSDK_NGX_Parameter_SetD(InParameter, InName, InValue);
+}
+
+void DlssCwrap__NVSDK_NGX_Parameter_SetUI(NVSDK_NGX_Parameter* InParameter, const char* InName, unsigned int InValue) {
+	NVSDK_NGX_Parameter_SetUI(InParameter, InName, InValue);
+}
+
+void DlssCwrap__NVSDK_NGX_Parameter_SetI(NVSDK_NGX_Parameter* InParameter, const char* InName, int InValue) {
+	NVSDK_NGX_Parameter_SetI(InParameter, InName, InValue);
+}
+
+void DlssCwrap__NVSDK_NGX_Parameter_SetVoidPointer(NVSDK_NGX_Parameter* InParameter, const char* InName, void* InValue) {
+	NVSDK_NGX_Parameter_SetVoidPointer(InParameter, InName, InValue);
+}
+
+// Parameter Get functions
+NVSDK_NGX_Result DlssCwrap__NVSDK_NGX_Parameter_GetULL(NVSDK_NGX_Parameter* InParameter, const char* InName, unsigned long long* OutValue) {
+	return NVSDK_NGX_Parameter_GetULL(InParameter, InName, OutValue);
+}
+
+NVSDK_NGX_Result DlssCwrap__NVSDK_NGX_Parameter_GetF(NVSDK_NGX_Parameter* InParameter, const char* InName, float* OutValue) {
+	return NVSDK_NGX_Parameter_GetF(InParameter, InName, OutValue);
+}
+
+NVSDK_NGX_Result DlssCwrap__NVSDK_NGX_Parameter_GetD(NVSDK_NGX_Parameter* InParameter, const char* InName, double* OutValue) {
+	return NVSDK_NGX_Parameter_GetD(InParameter, InName, OutValue);
+}
+
+NVSDK_NGX_Result DlssCwrap__NVSDK_NGX_Parameter_GetUI(NVSDK_NGX_Parameter* InParameter, const char* InName, unsigned int* OutValue) {
+	return NVSDK_NGX_Parameter_GetUI(InParameter, InName, OutValue);
+}
+
+NVSDK_NGX_Result DlssCwrap__NVSDK_NGX_Parameter_GetI(NVSDK_NGX_Parameter* InParameter, const char* InName, int* OutValue) {
+	return NVSDK_NGX_Parameter_GetI(InParameter, InName, OutValue);
+}
+
+NVSDK_NGX_Result DlssCwrap__NVSDK_NGX_Parameter_GetVoidPointer(NVSDK_NGX_Parameter* InParameter, const char* InName, void** OutValue) {
+	return NVSDK_NGX_Parameter_GetVoidPointer(InParameter, InName, OutValue);
+}
+
